@@ -6,6 +6,7 @@ from pyfiglet import figlet_format
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+import random
 
 # Scopes for accessing credentials from Google Cloud    
 SCOPE = [
@@ -163,4 +164,76 @@ def user_history(username, correct_answer, wrong_answer):
     """
     history.append_row([username.capitalize(), correct_answer, wrong_answer])
     
-user_history('maikon', 6, 4)
+def quiz():
+    """
+    Run the quiz, displaying questions and scoring.
+
+    - Randomly selects questions from a database.
+    - Prompts user input to guess answers.
+    - Tracks correct and wrong answers, showing partial scores after each question.
+    - Displays the final score at the end of the quiz.
+    - Appends the final score to the 'history' sheet.
+    
+    Credits to unpacking the questions:
+    https://stackoverflow.com/questions/36901/what-does-double-star-asterisk-and-star-asterisk-do-for-parameters/36908#36908
+
+    """
+    
+    # Import answers from the database
+    answers = questions.get("F2:F31")
+    
+    # Initialize scores
+    correct_answers = 0
+    wrong_answers = 0
+    
+    x = 0
+    while x < 10:
+        separator()
+        
+        # Generate a random number to select a question from the database
+        random_num_question = random.randint(0, 29)
+        
+        # Retrieve the current answer from the database
+        current_answer = str(answers[random_num_question - 2])
+        
+        # Format the answer string (remove '[]' and quotes)
+        current_answer_formatted = current_answer.strip("[]").replace("'", "")
+        
+        # Retrieve the current question from the database
+        row = questions.row_values(random_num_question + 2)
+        
+        # Print user name and current score
+        print(f"{username.capitalize()}'s Score:")
+        print(f'Correct answers: {Fore.GREEN} {correct_answers} {Style.RESET_ALL} | Wrong answers: {Fore.RED} {wrong_answers} {Style.RESET_ALL}\n')
+        
+        # Remove the answer column to show the question to the user
+        question = row[:-1]
+        
+        # Print the current question to the user
+        print(f'{x + 1}º Question:\n')
+        print(*question, sep='\n')
+        x += 1
+        separator()
+        
+        # Ask the user to guess the answer and verify the input
+        guess = verify_input()
+        
+        # Check if the answer is correct and update the scores
+        if guess == current_answer_formatted:
+            print(f'Well done! Your answer is {Fore.GREEN}correct{Style.RESET_ALL}!')
+            correct_answers += 1
+            time.sleep(2)
+        else:
+            # Display a message for incorrect answers, show the correct answer, and update the scores
+            print(f'Oops! Your answer is {Fore.RED}incorrect{Style.RESET_ALL}.')
+            print(f'The correct answer is option: {Fore.GREEN}{current_answer_formatted}{Style.RESET_ALL}')
+            wrong_answers += 1
+            time.sleep(3)
+        
+        clear()
+
+    # Update user history and show the final score
+    user_history(username, correct_answers, wrong_answers)
+    show_score(correct_answers, wrong_answers)
+    
+quiz()
