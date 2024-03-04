@@ -1,6 +1,7 @@
 # Import libraries
 import colorama
 from colorama import Fore, Style
+import time
 import gspread
 from google.oauth2.service_account import Credentials
 import random
@@ -42,3 +43,28 @@ def clear():
     Credits: https://stackoverflow.com/questions/29887629/how-to-clear-terminal-mac-osx-scrollback/29887659#29887659
     """
     print('\033c')
+    
+def game_rules():
+    """
+    Displays the game rules to the user.
+
+    Explains the quiz format: friendly multiple-choice questions.
+    Instructs users to answer by typing 'a', 'b', 'c', or 'd' and pressing 'Enter'.
+    Emphasizes the simplicity of the process.
+
+    """
+    separator()
+    print('Have some fun testing your Python skills with friendly multiple-choice questions!\n')
+    print(f"Answer each question by typing {Fore.CYAN}(a, b, c, or d)" + Style.RESET_ALL + " and then press 'Enter'.\n")
+    print('Easy as that!\n')
+    time.sleep(1)
+    print('Are you ready?\n')
+    time.sleep(1)
+    print("Let's rock!\n")
+    time.sleep(1)
+    print("Good luck!")
+    separator()
+    time.sleep(5)
+    clear()
+    
+game_rules()
