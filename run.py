@@ -67,4 +67,15 @@ def game_rules():
     time.sleep(5)
     clear()
     
-game_rules()
+def get_user_name():
+    """
+    Obtains the username from the user input.
+
+    - Prompts the user to enter their username.
+    - Stores the username in a global variable for accessibility.
+    - Returns the entered username.
+
+    """
+    global username  # Access the global variable for username
+    username = input('Hey, please enter your username:\n')
+    return username
