@@ -236,4 +236,50 @@ def quiz():
     user_history(username, correct_answers, wrong_answers)
     show_score(correct_answers, wrong_answers)
     
-quiz()
+def try_again():
+    """
+    Encourages the user to participate in another round of the quiz. If the user inputs 'Y', the quiz restarts. 
+    If 'N' is entered, a thank-you message is displayed, and the program exits.
+
+    The function is designed with error handling to ensure a smooth user experience. If any unexpected errors occur during 
+    the input processing, they are caught, and an error message is displayed.
+
+    Returns:
+    - True: If the user chooses to restart the quiz.
+    - False: If the user decides to exit the program.
+    """
+    while True:
+        try:
+            
+            separator()
+
+            # Prompt the user for another round and process their choice.
+            print("Ready for another round? Take the quiz again and enjoy the learning journey!\n")
+            choice = input("Choose Y or N and press enter:\n").upper().strip()
+
+            # If the user chooses to restart the quiz ('Y'), clear the screen and return True.
+            if choice == "Y":
+                time.sleep(2)
+                clear()
+                return True
+
+            # If the user chooses to exit the quiz ('N'), display a thank-you message, game over graphic, and exit.
+            elif choice == "N":
+                print()
+                print(f"{Fore.CYAN}Thank you for attempting the quiz!\n")
+                game_over = figlet_format("GameOver", font='doom', width=80)
+                separator()
+                print(f"{Fore.RED} {game_over}")
+                separator()
+                time.sleep(1)
+                exit()
+
+            # If the user provides an invalid input, prompt them to choose 'Y' or 'N'.
+            else:
+                print(Fore.RED + "Please choose Y or N.")
+        
+        # Catch any unexpected exceptions during user input processing and display an error message.
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+try_again()
