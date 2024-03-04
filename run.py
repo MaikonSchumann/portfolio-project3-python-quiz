@@ -34,3 +34,11 @@ def separator():
     print()
     print(f'{Fore.CYAN}-' * 60)
     print(f'{Fore.CYAN}-' * 60 + '\n' + Style.RESET_ALL)
+    
+def clear():
+    """
+    Clears the terminal
+    
+    Credits: https://stackoverflow.com/questions/29887629/how-to-clear-terminal-mac-osx-scrollback/29887659#29887659
+    """
+    print('\033c')
