@@ -152,4 +152,15 @@ def show_score(correct_answers, wrong_answers):
         print('Not bad, but you can do better!')
         print(f'You got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL} with {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL}.')
         
-show_score(5, 2)
+def user_history(username, correct_answer, wrong_answer):
+    """
+    Append user's quiz history to the 'history' sheet.
+
+    Parameters:
+    - username (str): User's name.
+    - correct_answer (int): Count of correct answers.
+    - wrong_answer (int): Count of incorrect answers.
+    """
+    history.append_row([username.capitalize(), correct_answer, wrong_answer])
+    
+user_history('maikon', 6, 4)
