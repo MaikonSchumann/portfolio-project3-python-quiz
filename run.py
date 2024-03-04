@@ -304,4 +304,7 @@ def main():
     while try_again():
         quiz()
         
-main()
+# Call the main function
+# Credits: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
+if __name__ == "__main__":
+    main()
