@@ -1,10 +1,11 @@
 # Import libraries
 import colorama
 from colorama import Fore, Style
+import pyfiglet
+from pyfiglet import figlet_format
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-import random
 
 # Scopes for accessing credentials from Google Cloud    
 SCOPE = [
@@ -79,3 +80,28 @@ def get_user_name():
     global username  # Access the global variable for username
     username = input('Hey, please enter your username:\n')
     return username
+
+def welcome_screen():
+    """ 
+    Displays the welcome screen for the Python Quiz game.
+
+    Prints a starting message, waits briefly for effect, and showcases an artistic title.
+    Captures the user's name and provides a personalized welcome message.
+
+    """
+    separator()  
+    print('Starting the ultimate Python Quiz game..\n')
+    time.sleep(2)  
+    separator()  
+
+    # Artistic representation of the game title.
+    art = figlet_format("Python Quiz", font='doom')
+    print(Fore.CYAN + art + Style.RESET_ALL)
+    separator()  
+
+    # Capture the user's name and offer a personalized welcome.
+    user_name = get_user_name()
+    print(f'Welcome to the Python Quiz game {Fore.CYAN}{user_name.capitalize()}!\n' + Style.RESET_ALL)
+
+welcome_screen()
+game_rules()
