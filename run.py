@@ -103,5 +103,27 @@ def welcome_screen():
     user_name = get_user_name()
     print(f'Welcome to the Python Quiz game {Fore.CYAN}{user_name.capitalize()}!\n' + Style.RESET_ALL)
 
-welcome_screen()
-game_rules()
+def verify_input():
+    """
+    Validates user input for a quiz answer.
+
+    - Prompts the user to choose an answer.
+    - Ensures the input is one of the valid choices: 'a', 'b', 'c', or 'd'.
+    - Returns the valid answer or displays an error message and prompts for input again.
+
+    """
+    choices = ['a', 'b', 'c', 'd']
+
+    while True:
+        try:
+            answer = input('Choose your answer:\n').lower()
+
+            if answer in choices:
+                return answer
+            else:
+                raise ValueError(f'Invalid input! Choose a valid option: {Fore.CYAN}a, b, c, or d{Style.RESET_ALL}!\n')
+
+        except ValueError as ve:
+            print(ve)
+            
+verify_input()
