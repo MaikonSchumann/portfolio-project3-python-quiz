@@ -126,4 +126,30 @@ def verify_input():
         except ValueError as ve:
             print(ve)
             
-verify_input()
+def show_score(correct_answers, wrong_answers):
+    """
+    Display the current quiz play score to the user.
+
+    Parameters:
+    - correct_answers (int): Number of correct answers in the quiz.
+    - wrong_answers (int): Number of incorrect answers in the quiz.
+    """
+    
+    if correct_answers >= 7:
+        separator()
+        print('Well done, you are really into Python!')
+        print(f"You got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL}, that's very good!")
+        print(f'Only got {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL} this time.')
+        
+    elif correct_answers <= 4:
+        separator()
+        print('Hmm, not quite there yet. Consider putting in some more study time and giving it another shot!')
+        print(f'Only got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL} this time.')
+        print(f'And then you got {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL}.')
+        
+    else:
+        separator()
+        print('Not bad, but you can do better!')
+        print(f'You got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL} with {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL}.')
+        
+show_score(5, 2)
