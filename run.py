@@ -1,4 +1,6 @@
 # Import libraries
+import colorama
+from colorama import Fore, Style
 import gspread
 from google.oauth2.service_account import Credentials
 import random
@@ -20,5 +22,15 @@ SHEET = GSPREAD.open("PythonQuizDatabase")
 questions = SHEET.worksheet('questions')
 history = SHEET.worksheet('history')
 
-print(questions)
-print(history)
+# Available user choices
+choices = ["a", "b", "c", "d"]
+
+username = ''
+
+def separator():
+    """
+    Display a separator line
+    """
+    print()
+    print(f'{Fore.CYAN}-' * 60)
+    print(f'{Fore.CYAN}-' * 60 + '\n' + Style.RESET_ALL)
