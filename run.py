@@ -282,4 +282,26 @@ def try_again():
         except Exception as e:
             print(f"An error occurred: {e}")
 
-try_again()
+def main():
+    """
+    The main function orchestrating the execution of the quiz program.
+
+    Steps:
+    1. Displays the welcome screen to greet the user.
+    2. Presents the game rules to inform the user about the quiz guidelines.
+    3. Initiates the quiz for the first time.
+    4. Enters a loop where, after completing the quiz, the user is prompted to try again.
+       If the user chooses to continue, another round of the quiz is initiated.
+       This loop continues until the user decides to exit the program.
+
+    The function serves as the entry point for running the quiz program.
+    """
+    welcome_screen()
+    game_rules()
+    quiz()
+
+    # Enter a loop to allow the user to play the quiz again if desired.
+    while try_again():
+        quiz()
+        
+main()
