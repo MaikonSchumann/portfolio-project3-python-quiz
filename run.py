@@ -8,7 +8,8 @@ import gspread
 from google.oauth2.service_account import Credentials
 import random
 
-# Scopes for accessing credentials from Google Cloud    
+# Scopes for accessing credentials from Google Cloud
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -30,6 +31,7 @@ choices = ["a", "b", "c", "d"]
 
 username = ''
 
+
 def separator():
     """
     Display a separator line
@@ -37,21 +39,26 @@ def separator():
     print()
     print(f'{Fore.CYAN}-' * 60)
     print(f'{Fore.CYAN}-' * 60 + '\n' + Style.RESET_ALL)
-    
+
+
 def clear():
     """
     Clears the terminal
-    
-    Credits: https://stackoverflow.com/questions/29887629/how-to-clear-terminal-mac-osx-scrollback/29887659#29887659
+
+    Credits:
+    https://stackoverflow.com/questions/29887629/how-to-clear-terminal-mac-osx-scrollback/29887659#29887659
     """
     print('\033c')
-    
+
+
 def game_rules():
+
     """
     Displays the game rules to the user.
 
     Explains the quiz format: friendly multiple-choice questions.
-    Instructs users to answer by typing 'a', 'b', 'c', or 'd' and pressing 'Enter'.
+    Instructs users to answer by typing 'a', 'b', 'c', or 'd'
+    and pressing 'Enter'.
     Emphasizes the simplicity of the process.
 
     """
@@ -68,8 +75,10 @@ def game_rules():
     separator()
     time.sleep(5)
     clear()
-    
+
+
 def get_user_name():
+
     """
     Obtains the username from the user input.
 
@@ -82,27 +91,29 @@ def get_user_name():
     username = input('Hey, please enter your username:\n')
     return username
 
+
 def welcome_screen():
-    """ 
+    """
     Displays the welcome screen for the Python Quiz game.
 
     Prints a starting message, waits briefly for effect, and showcases an artistic title.
     Captures the user's name and provides a personalized welcome message.
 
     """
-    separator()  
+    separator()
     print('Starting the ultimate Python Quiz game..\n')
-    time.sleep(2)  
-    separator()  
+    time.sleep(2)
+    separator()
 
     # Artistic representation of the game title.
     art = figlet_format("Python Quiz", font='doom')
     print(Fore.CYAN + art + Style.RESET_ALL)
-    separator()  
+    separator()
 
     # Capture the user's name and offer a personalized welcome.
     user_name = get_user_name()
     print(f'Welcome to the Python Quiz game {Fore.CYAN}{user_name.capitalize()}!\n' + Style.RESET_ALL)
+
 
 def verify_input():
     """
@@ -126,7 +137,8 @@ def verify_input():
 
         except ValueError as ve:
             print(ve)
-            
+
+
 def show_score(correct_answers, wrong_answers):
     """
     Display the current quiz play score to the user.
@@ -135,24 +147,25 @@ def show_score(correct_answers, wrong_answers):
     - correct_answers (int): Number of correct answers in the quiz.
     - wrong_answers (int): Number of incorrect answers in the quiz.
     """
-    
+
     if correct_answers >= 7:
         separator()
         print('Well done, you are really into Python!')
         print(f"You got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL}, that's very good!")
         print(f'Only got {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL} this time.')
-        
+
     elif correct_answers <= 4:
         separator()
         print('Hmm, not quite there yet. Consider putting in some more study time and giving it another shot!')
         print(f'Only got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL} this time.')
         print(f'And then you got {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL}.')
-        
+
     else:
         separator()
         print('Not bad, but you can do better!')
         print(f'You got {Fore.GREEN}{correct_answers} correct answers{Style.RESET_ALL} with {Fore.RED}{wrong_answers} wrong answers{Style.RESET_ALL}.')
-        
+
+
 def user_history(username, correct_answer, wrong_answer):
     """
     Append user's quiz history to the 'history' sheet.
@@ -163,7 +176,8 @@ def user_history(username, correct_answer, wrong_answer):
     - wrong_answer (int): Count of incorrect answers.
     """
     history.append_row([username.capitalize(), correct_answer, wrong_answer])
-    
+
+
 def quiz():
     """
     Run the quiz, displaying questions and scoring.
@@ -173,51 +187,51 @@ def quiz():
     - Tracks correct and wrong answers, showing partial scores after each question.
     - Displays the final score at the end of the quiz.
     - Appends the final score to the 'history' sheet.
-    
+
     Credits to unpacking the questions:
     https://stackoverflow.com/questions/36901/what-does-double-star-asterisk-and-star-asterisk-do-for-parameters/36908#36908
 
     """
-    
+
     # Import answers from the database
     answers = questions.get("F2:F31")
-    
+
     # Initialize scores
     correct_answers = 0
     wrong_answers = 0
-    
+
     x = 0
     while x < 10:
         separator()
-        
+
         # Generate a random number to select a question from the database
         random_num_question = random.randint(0, 29)
-        
+
         # Retrieve the current answer from the database
         current_answer = str(answers[random_num_question - 2])
-        
+
         # Format the answer string (remove '[]' and quotes)
         current_answer_formatted = current_answer.strip("[]").replace("'", "")
-        
+
         # Retrieve the current question from the database
         row = questions.row_values(random_num_question + 2)
-        
+
         # Print user name and current score
         print(f"{username.capitalize()}'s Score:")
         print(f'Correct answers: {Fore.GREEN} {correct_answers} {Style.RESET_ALL} | Wrong answers: {Fore.RED} {wrong_answers} {Style.RESET_ALL}\n')
-        
+
         # Remove the answer column to show the question to the user
         question = row[:-1]
-        
+
         # Print the current question to the user
         print(f'{x + 1}º Question:\n')
         print(*question, sep='\n')
         x += 1
         separator()
-        
+
         # Ask the user to guess the answer and verify the input
         guess = verify_input()
-        
+
         # Check if the answer is correct and update the scores
         if guess == current_answer_formatted:
             print(f'Well done! Your answer is {Fore.GREEN}correct{Style.RESET_ALL}!')
@@ -229,19 +243,20 @@ def quiz():
             print(f'The correct answer is option: {Fore.GREEN}{current_answer_formatted}{Style.RESET_ALL}')
             wrong_answers += 1
             time.sleep(3)
-        
+
         clear()
 
     # Update user history and show the final score
     user_history(username, correct_answers, wrong_answers)
     show_score(correct_answers, wrong_answers)
-    
+
+
 def try_again():
     """
-    Encourages the user to participate in another round of the quiz. If the user inputs 'Y', the quiz restarts. 
+    Encourages the user to participate in another round of the quiz. If the user inputs 'Y', the quiz restarts.
     If 'N' is entered, a thank-you message is displayed, and the program exits.
 
-    The function is designed with error handling to ensure a smooth user experience. If any unexpected errors occur during 
+    The function is designed with error handling to ensure a smooth user experience. If any unexpected errors occur during
     the input processing, they are caught, and an error message is displayed.
 
     Returns:
@@ -250,7 +265,7 @@ def try_again():
     """
     while True:
         try:
-            
+
             separator()
 
             # Prompt the user for another round and process their choice.
@@ -277,10 +292,11 @@ def try_again():
             # If the user provides an invalid input, prompt them to choose 'Y' or 'N'.
             else:
                 print(Fore.RED + "Please choose Y or N.")
-        
+
         # Catch any unexpected exceptions during user input processing and display an error message.
         except Exception as e:
             print(f"An error occurred: {e}")
+
 
 def main():
     """
@@ -303,8 +319,11 @@ def main():
     # Enter a loop to allow the user to play the quiz again if desired.
     while try_again():
         quiz()
-        
+
+
 # Call the main function
 # Credits: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
+
+
 if __name__ == "__main__":
     main()
