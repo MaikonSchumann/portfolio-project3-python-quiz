@@ -71,3 +71,7 @@ The questions and options are extracted from the "questions" worksheet, which st
 - Finally, the user will be given the choice to either play again or exit the program.
 
 - - -
+
+# Design
+
+With the incorporation of a template in the front-end files, users can interact with this project using a simulated terminal on a web page. No alterations were necessary in other files.
