@@ -145,6 +145,8 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 ![Game Over](documentation/gameover_message.png)
 
+- - -
+
 ## Future Implementations
 - Different levels of questions
 - Allow users to choose quiz topics or categories before starting the quiz.
@@ -152,3 +154,28 @@ Lucid was used to create this flowchart, providing a concise representation of t
 - Implement timed quizzes where users need to answer questions within a specified time limit.
 
 - - -
+
+# Deployment
+The code for this project was written in Visual Studio Code because of technical issues with Gitpod. Subsequently, the application was deployed from GitHub to Heroku, following a step-by-step process, with active version releasing.
+
+Follow these deployment steps after setting up your Heroku account:
+
+Click on "New" in the top-right corner of your Heroku Dashboard and choose "Create new app" from the dropdown menu.
+Provide a unique app name and select a region (EU or USA).
+Click "Create App."
+To enable the project to run on Heroku, install the dependencies by executing the following command in the terminal:
+
+`pip3 freeze > requirements.txt`
+This command generates a list of requirements in the `requirements.txt` file.
+
+To secure sensitive data, the creds.json file is protected in the gitignore file. These credentials are necessary for connecting to the API. Follow these steps to allow the Heroku Application to access the spreadsheet:
+
+From the new app's Settings, click "Reveal Config Vars."
+Set the value of KEY to CREDS (all capital letters), copy the entire creds.json from the repository, and paste it into the VALUE field. Click "Add."
+To support dependencies, select "Add Buildpack."
+Ensure Python is the first buildpack and Node.js is the second.
+Go to the "Deploy" section and select "GitHub" under "Deployment method."
+Enter your repository name, click 'Search,' and then 'Connect' when it appears below.
+Choose the branch you want to build your app from.
+Optionally, click on "Enable Automatic Deploys" to keep the app up to date with your GitHub repository.
+Wait for the app to build. Once ready, you'll see the “App was successfully deployed” message with a 'View' button to take you to your deployed link.
