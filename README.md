@@ -33,3 +33,15 @@ The application has been deployed using Heroku.
 * [Lucidchart](https://www.lucidchart.com/) - to draw a flowchart.
 
 - - -
+
+For this project, I utilized a [Code Institute template](https://github.com/Code-Institute-Org/python-essentials-template), which supplied all the necessary files to enable the mock terminal functionality in the browser.
+
+The questions and options are extracted from the "questions" worksheet, which stores 30 general questions. User history is updated in the "history" worksheet.
+
+* Question Worksheet:
+* ![Spreadsheet](documentation/questionsworksheet.png)
+
+* History Worksheet:
+* ![Spreadsheet](documentation/historyworksheet.png)
+
+- - - 
