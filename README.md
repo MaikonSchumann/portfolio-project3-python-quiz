@@ -112,3 +112,8 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 * Invalid answer input
 ![Invalid Choice](documentation/invalid_answer_input.png)
+
+### Update the history worksheet
+
+- After each play, the user's gameplay data will be recorded in the history worksheet.
+![Update message](documentation/update_message.png)
