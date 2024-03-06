@@ -274,7 +274,10 @@ def try_again():
 
             # If the user chooses to restart the quiz ('Y'), clear the screen and return True.
             if choice == "Y":
-                time.sleep(2)
+                let_try_again = figlet_format("Let'sTryAgain", font='doom', width=80)
+                separator()
+                print(f"{Fore.CYAN} {let_try_again}")
+                time.sleep(3)
                 clear()
                 return True
 
