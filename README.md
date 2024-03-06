@@ -45,3 +45,29 @@ The questions and options are extracted from the "questions" worksheet, which st
 * ![Spreadsheet](documentation/historyworksheet.png)
 
 - - - 
+
+# User Experience (UX)
+
+## The ideal users for this website is:
+* Users learning Python who wish to assess their knowledge.
+
+## User stories:
+
+* As a new user, I expect to quickly comprehend the program's purpose.
+
+
+* I wish for clear instructions on how to participate in the quiz.
+* I expect precise feedback based on my inputs.
+* I would like the choice to either replay the quiz or exit the program.
+* I expect the ability to restart the quiz.
+
+## How to play:
+
+- Initially, the user is required to input a valid name to commence the game.
+- Subsequently, the user can review the instructions.
+- Following that, the quiz initiates, and the user must select a, b, c, or d as their choice.
+- The score increases by one for each correct choice or incorrect one.
+- After finishing the 10 random questions, the user's score will be shown in the terminal and stored in the history worksheet.
+- Finally, the user will be given the choice to either play again or exit the program.
+
+- - -
