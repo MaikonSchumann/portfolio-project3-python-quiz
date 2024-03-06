@@ -130,3 +130,17 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 * Bad score
 ![Bad score](documentation/bad_score.png)
+
+### Try again
+
+- After completing the quiz, the user will be asked about their preference to play again or not.
+
+![Try Again](documentation/tryagain_question.png)
+
+- If the user decides to play again, a message encouraging another attempt will be shown for 3 seconds. Subsequently, the quiz will start again.
+
+![Try Again](documentation/tryagain_message.png)
+
+- If the user chooses not to play again, a thank you message will be presented, and the application will exit.
+
+![Game Over](documentation/gameover_message.png)
