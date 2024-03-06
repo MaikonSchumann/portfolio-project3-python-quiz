@@ -75,3 +75,8 @@ The questions and options are extracted from the "questions" worksheet, which st
 # Design
 
 With the incorporation of a template in the front-end files, users can interact with this project using a simulated terminal on a web page. No alterations were necessary in other files.
+
+## Lucid Chart
+Lucid was used to create this flowchart, providing a concise representation of the application's structure and logic.
+
+![Lucidchart](documentation/lucidchartquiz.png)
