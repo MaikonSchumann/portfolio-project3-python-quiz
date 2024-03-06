@@ -117,3 +117,16 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 - After each play, the user's gameplay data will be recorded in the history worksheet.
 ![Update message](documentation/update_message.png)
+
+### Score
+
+- Following the completion of 10 random questions, the score will be shown.
+
+* Good score
+![Good score](documentation/good_score.png)
+
+* Medium score
+![Medium score](documentation/medium_score.png)
+
+* Bad score
+![Bad score](documentation/bad_score.png)
