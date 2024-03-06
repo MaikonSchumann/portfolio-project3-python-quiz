@@ -80,3 +80,10 @@ With the incorporation of a template in the front-end files, users can interact 
 Lucid was used to create this flowchart, providing a concise representation of the application's structure and logic.
 
 ![Lucidchart](documentation/lucidchartquiz.png)
+
+## Existing Features
+
+### Introduction
+- When the program is executed, users are presented with the welcome screen for the Python Quiz, prompting them to enter their username.
+
+![WelcomeScreen](documentation/welcomescreen.png)
