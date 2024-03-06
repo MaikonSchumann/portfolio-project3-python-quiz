@@ -289,3 +289,12 @@ The following sources were used for this project:
 - [Markdown Guide](https://www.markdownguide.org/extended-syntax/#tables)
 - [Colorama Guide](https://pypi.org/project/colorama/)
 - [Boilerplate Guide](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
+
+- - -
+
+# Acknowledgements
+* I appreciate my family's patience as I dedicate considerable time to coding.
+
+* My Mentor Lauren-Nicole Popich for continuous helpful feedback.
+
+- - -
