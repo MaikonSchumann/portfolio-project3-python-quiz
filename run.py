@@ -176,6 +176,9 @@ def user_history(username, correct_answer, wrong_answer):
     - wrong_answer (int): Count of incorrect answers.
     """
     history.append_row([username.capitalize(), correct_answer, wrong_answer])
+    separator()
+    print('Updating your scores to the history worksheet...')
+    time.sleep(2)
 
 
 def quiz():
