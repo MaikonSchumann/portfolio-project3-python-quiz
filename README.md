@@ -118,10 +118,10 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 - When the user makes a valid choice, the system will indicate whether the response is correct or incorrect.
 
-* Correct answer
+* Correct answer will be incremented by one at the top of the screen.
 ![Correct Answer](documentation/correct_answer.png)
 
-* Wrong answer
+* Wrong answer will be incremented by one at the top of the screen. Towards the end, the correct option will be revealed.
 ![Wrong Answer](documentation/wrong_answer.png)
 
 - In case of an invalid input, the user will be prompted repeatedly until a valid choice is made.
