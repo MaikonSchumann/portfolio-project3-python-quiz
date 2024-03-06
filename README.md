@@ -144,3 +144,11 @@ Lucid was used to create this flowchart, providing a concise representation of t
 - If the user chooses not to play again, a thank you message will be presented, and the application will exit.
 
 ![Game Over](documentation/gameover_message.png)
+
+## Future Implementations
+- Different levels of questions
+- Allow users to choose quiz topics or categories before starting the quiz.
+- Integrate additional learning resources such as explanations, hints, or references for each question.
+- Implement timed quizzes where users need to answer questions within a specified time limit.
+
+- - -
