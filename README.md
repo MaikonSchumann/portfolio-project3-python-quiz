@@ -276,3 +276,16 @@ Although some errors were noted in the linter related to function descriptions a
 
 ## Compatibility
 The website displays correctly across different browsers and screen sizes.
+
+- - - 
+
+# Credits
+## Code
+The following sources were used for this project:
+- Python Essentials from [Code Institute](https://codeinstitute.net/)
+- [Gspread](https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column)
+- [Develop Google Sheets solutions](https://developers.google.com/sheets/api/guides/values)
+- [Pyfiglet](https://www.javatpoint.com/python-pyfiglet-module#:~:text=We%20can%20use%20the%20functions,import%20pyfiglet%20as%20pfg)
+- [Markdown Guide](https://www.markdownguide.org/extended-syntax/#tables)
+- [Colorama Guide](https://pypi.org/project/colorama/)
+- [Boilerplate Guide](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
