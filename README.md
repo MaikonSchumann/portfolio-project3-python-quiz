@@ -273,3 +273,6 @@ Although some errors were noted in the linter related to function descriptions a
 |14| Play again | The user indicates a wish to play again by entering 'y'.| Display a "Try again" message, and the quiz restarts.| PASS |
 |15| Play again | The user chooses not to play again and inputs 'n'.| Display a "Game Over" message, and the quiz ends.| PASS |
 |16| Colors | When run the quiz | Text colors are displayed according to code | PASS |
+
+## Compatibility
+The website displays correctly across different browsers and screen sizes.
