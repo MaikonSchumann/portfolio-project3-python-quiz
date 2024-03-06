@@ -91,3 +91,9 @@ Lucid was used to create this flowchart, providing a concise representation of t
 - Once the user inputs a name, the game rules and instructions are presented.
 
 ![Instructions](documentation/gamerules.png)
+
+### Quiz
+
+- After the instructions are displayed, the quiz begins automatically. Questions are presented sequentially, each with four options. Users are instructed to choose from options a, b, c, or d.
+
+![Questions](documentation/questions.png)
