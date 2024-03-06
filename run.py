@@ -208,7 +208,7 @@ def quiz():
         random_num_question = random.randint(0, 29)
 
         # Retrieve the current answer from the database
-        current_answer = str(answers[random_num_question - 2])
+        current_answer = str(answers[random_num_question])
 
         # Format the answer string (remove '[]' and quotes)
         current_answer_formatted = current_answer.strip("[]").replace("'", "")
