@@ -12,3 +12,24 @@ You can explore a live demonstration [here](https://project3-python-quiz-5f0c6fd
 The application has been deployed using Heroku.
 
 - - -
+
+# Technologies Used
+## Language
+* Python3
+
+## Libraries
+* colorama
+* pyfiglet
+* time
+* gspread
+* google.oauth2.service_account
+* random
+
+## Frameworks & Tools
+* Heroku Platform: Deployment of the application in a live environment.
+* Visual Studio Code: Creation of the website.
+* GitHub: Repository storage and deployment of the website.
+* Google Sheets API: Handling data automation.
+* [Lucidchart](https://www.lucidchart.com/) - to draw a flowchart.
+
+- - -
