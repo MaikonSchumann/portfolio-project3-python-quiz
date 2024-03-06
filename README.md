@@ -252,3 +252,24 @@ The project was validated using the CI Python Linter, and no significant errors 
 Although some errors were noted in the linter related to function descriptions and game rules (E501 line too long), they have been deliberately retained as part of the game's description. It's important to acknowledge that in a professional context, certain errors may not be acceptable for file uploads. However, for the purposes of this study project, these errors have been preserved.
 
 ![CI Python Linter](documentation/ci_python_linter.png)
+
+### Manual: 
+
+|N.| Test Label | Test Action | Expected Outcome | Test Outcome |
+|:---|:--- |:--- |:--- |:--- |
+|01| Type username | In the input field, capture the user input and store it in a global variable named "username." | The username has been saved, and the application proceeds.| PASS |
+|02| Quiz questions| The quiz begins with the first question. After a valid choice from the user, the next question is presented, with questions randomly selected from the questions worksheet.| All questions are accurately presented.| PASS |
+|03| Valid user's choice | In the input field, try entering a valid choice (a, b, c, or d).| The choice is valid, and the quiz proceeds.| PASS |
+|04| Invalid user's choice | In the input field, try entering an invalid choice (number, empty, or other invalid characters).| The choice is invalid, and the user must enter a valid choice to proceed with the quiz.| PASS |
+|05| Check answer| Receive the valid user input. | Verify if the user's guess matches the correct answer in the questions worksheet or not.| PASS |
+|06| Show the correct answer| Type a correct answer | It shows a message confirming the correct choice, and increments the correct_score by +1.| PASS |
+|07| Show the incorrect answer| Type a incorrect answer | It shows a message confirming the incorrect choice, displays the correct option, and increments the wrong_score by +1.| PASS |
+|08| Update history worksheet | After 10 random questions, the program updates the user's gameplay score in the history worksheet on PythonQuizDataBase.| The current gameplay score will be stored on history worksheet.| PASS |
+|09| Final message score >= 7 | Score 7 or more  | It displays a congratulation message correctly | PASS |
+|10| Final message score <= 4 | Score 4 or less  | It shows an encouraging message inviting the user to study a little more try the quiz again. | PASS |
+|11| Final message score < 7 and > 4 | Score between 4 - 7  | It shows an encouraging message to attempt the quiz again.| PASS |
+|12| Valid Try again Input (Y/N) | Type a valid option (Y/N) | The input is correct and the program proceeds| PASS |
+|13| Invalid Try again Input (Y/N) | Type invalid option (Y/N) | A valid input is required| PASS |
+|14| Play again | The user indicates a wish to play again by entering 'y'.| Display a "Try again" message, and the quiz restarts.| PASS |
+|15| Play again | The user chooses not to play again and inputs 'n'.| Display a "Game Over" message, and the quiz ends.| PASS |
+|16| Colors | When run the quiz | Text colors are displayed according to code | PASS |
