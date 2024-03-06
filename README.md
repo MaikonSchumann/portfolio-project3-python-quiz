@@ -239,3 +239,16 @@ For deploying from GitHub, proceed with these steps:
 The url for this website can be found [here](https://project3-python-quiz-5f0c6fd0bce1.herokuapp.com/).
 
 - - -
+
+# Testing 
+
+The site's different features operate as intended, ensuring users can easily accomplish their goals with expected outcomes. The terminal played a crucial role in the application's development, used to identify and resolve issues while testing both correct and incorrect user inputs.
+
+## Functionality
+### Validator
+
+The project was validated using the CI Python Linter, and no significant errors were detected.
+
+Although some errors were noted in the linter related to function descriptions and game rules (E501 line too long), they have been deliberately retained as part of the game's description. It's important to acknowledge that in a professional context, certain errors may not be acceptable for file uploads. However, for the purposes of this study project, these errors have been preserved.
+
+![CI Python Linter](documentation/ci_python_linter.png)
