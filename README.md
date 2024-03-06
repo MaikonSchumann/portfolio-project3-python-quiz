@@ -299,6 +299,7 @@ The website displays correctly across different browsers and screen sizes.
 ## Code
 The following sources were used for this project:
 - Python Essentials from [Code Institute](https://codeinstitute.net/)
+- The API connection was established following the Code Institute's Love Sandwiches guidelines.
 - [Gspread](https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column)
 - [Develop Google Sheets solutions](https://developers.google.com/sheets/api/guides/values)
 - [Pyfiglet](https://www.javatpoint.com/python-pyfiglet-module#:~:text=We%20can%20use%20the%20functions,import%20pyfiglet%20as%20pfg)
