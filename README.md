@@ -94,7 +94,7 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 ### Quiz
 
-- After the instructions are displayed, the quiz begins automatically. Questions are presented sequentially, each with four options. Users are instructed to choose from options a, b, c, or d.
+- After the instructions are displayed, the quiz begins automatically. Questions are presented sequentially, each with four options. Users are instructed to choose from options a, b, c, or d. Additionally, each question displays the current score to the user.
 
 ![Questions](documentation/questions.png)
 
