@@ -87,3 +87,7 @@ Lucid was used to create this flowchart, providing a concise representation of t
 - When the program is executed, users are presented with the welcome screen for the Python Quiz, prompting them to enter their username.
 
 ![WelcomeScreen](documentation/welcomescreen.png)
+
+- Once the user inputs a name, the game rules and instructions are presented.
+
+![Instructions](documentation/gamerules.png)
