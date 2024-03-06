@@ -97,3 +97,13 @@ Lucid was used to create this flowchart, providing a concise representation of t
 - After the instructions are displayed, the quiz begins automatically. Questions are presented sequentially, each with four options. Users are instructed to choose from options a, b, c, or d.
 
 ![Questions](documentation/questions.png)
+
+### Feedback on each question
+
+- When the user makes a valid choice, the system will indicate whether the response is correct or incorrect.
+
+* Correct answer
+![Correct Answer](documentation/correct_answer.png)
+
+* Wrong answer
+![Wrong Answer](documentation/wrong_answer.png)
