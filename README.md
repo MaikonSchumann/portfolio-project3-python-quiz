@@ -107,3 +107,8 @@ Lucid was used to create this flowchart, providing a concise representation of t
 
 * Wrong answer
 ![Wrong Answer](documentation/wrong_answer.png)
+
+- In case of an invalid input, the user will be prompted repeatedly until a valid choice is made.
+
+* Invalid answer input
+![Invalid Choice](documentation/invalid_answer_input.png)
