@@ -218,3 +218,24 @@ $ git push origin main
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
+**Forking the GitHub Repository**
+
+To fork this repository for proposing changes or as inspiration for another project, follow these steps:
+
+1. Log in or sign up on GitHub.
+2. Open the project [repository](https://github.com/MaikonSchumann/portfolio-project3-python-quiz).
+3. Click the "Fork" button in the top right corner.
+4. A copy of the repository will now be available in your own GitHub account.
+
+For deploying from GitHub, proceed with these steps:
+
+1. Log into your GitHub repository; create an account if needed.
+2. Click 'Settings' in the main Repository menu.
+3. Navigate to 'Pages' in the left-hand side navigation menu.
+4. In the Source section, click the "Branch" button and change from 'None' to 'Main'.
+5. The page should automatically refresh, displaying a URL.
+6. Test the link by clicking on the URL.
+
+The url for this website can be found [here](https://project3-python-quiz-5f0c6fd0bce1.herokuapp.com/).
+
+- - -
