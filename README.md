@@ -13,6 +13,22 @@ The application has been deployed using Heroku.
 
 - - -
 
+# Contents
+* [Technologies Used](#technologies-used)
+* [User Experience](#user-experience-ux)
+* [Design](#design)
+  * [Lucid Chart Flowchart](#lucid-chart)
+  * [Existing Features](#existing-features)
+  * [Future Implementations](#future-implementations)
+* [Deployment](#deployment)
+  * [Heroku Deployment](#heroku-deployment)
+  * [Run locally](#run-locally)
+* [Testing](#testing)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgements)
+
+- - -
+
 # Technologies Used
 ## Language
 * Python3
