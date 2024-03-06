@@ -284,7 +284,7 @@ def try_again():
             # If the user chooses to exit the quiz ('N'), display a thank-you message, game over graphic, and exit.
             elif choice == "N":
                 print()
-                print(f"{Fore.CYAN}Thank you for attempting the quiz!\n")
+                print(f"{Fore.CYAN}Thanks for participating in the quiz!\n")
                 game_over = figlet_format("GameOver", font='doom', width=80)
                 separator()
                 print(f"{Fore.RED} {game_over}")
